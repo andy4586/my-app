@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Default Light Theme */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #1e1e1e, #121212);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* App Container */
+.app {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Dark Mode - App */
+.app.dark {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Dark Mode Button */
+.dark-mode-toggle {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #444;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.dark-mode-toggle:hover {
+  background: #666;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Dark Mode - Input */
+body.dark input {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+input:focus {
+  transform: scale(1.05);
+}
+
+/* Add Button */
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #ff3b3b;
+  transform: scale(1.1);
+}
+
+/* Task List */
+.todo-list {
+  margin-top: 15px;
+}
+
+/* Individual Task */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode - Task */
+body.dark .todo {
+  background: rgba(50, 50, 50, 0.5);
+}
+
+/* Delete Button */
+.todo button {
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.todo button:hover {
+  color: red;
 }
