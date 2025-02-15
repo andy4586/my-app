@@ -1,7 +1,7 @@
 /* Default Light Theme */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(135deg, #aaff00, #e600ff);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ body {
 /* Dark Mode */
 body.dark {
   background: linear-gradient(135deg, #1e1e1e, #121212);
-  color: white;
+  color: rgb(0, 255, 162);
 }
 
 /* App Container */
